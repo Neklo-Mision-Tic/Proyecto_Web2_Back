@@ -1,6 +1,7 @@
 import conectarBD from "./db/db";
 import { UserModel } from "./models/user";
-import { Enum_Rol, Enum_EstadoUsuario } from "./models/enums";
+import { Enum_Rol, Enum_EstadoUsuario, Enum_TipoObjetivo, Enum_EstadoProyecto, Enum_FaseProyecto } from "./models/enums";
+import { ProjectModel } from "./models/project";
 
 const main = async () => {
   await conectarBD();
@@ -31,6 +32,31 @@ const main = async () => {
     .catch((e) => {
       console.error("Error", e);
     });
+
+///////////////////////////////////////////////////////////////////
+  const proyectoCreado =  ProjectModel.create({
+    nombre: 'Proyecto Mision TIC2',
+    objetivos: [
+      { descripcion: 'Este es el objetivo general', tipo: Enum_TipoObjetivo.GENERAL },
+      { descripcion: 'Este es el objetivo especifico 1', tipo: Enum_TipoObjetivo.ESPECIFICO },
+      { descripcion: 'Este es el objetivo especifico 2', tipo: Enum_TipoObjetivo.ESPECIFICO },
+    ],
+    presupuesto: 120000,
+    fechaInicio: new Date('2021/12/24'),
+    fechaFin: new Date('2022/12/24'),
+    lider: "6195d905beaedc9b1a520181",
+    estado: Enum_EstadoProyecto.ACTIVO,
+    fase: Enum_FaseProyecto.INICIADO
+    
+  });
+
+  //const consultaProyectoConObjetivos3 = async () => {
+  //const proyectoCreado = await ProjectModel.find({ id: '6196823d134083c6a58fb2f8' });
+  //console.log('proyecto', proyectoCreado);
+  //};
+
+  ///////////////////////////////////////////////////////////////////////////////////////
+
 };
 
 main();

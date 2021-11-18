@@ -1,49 +1,26 @@
 import { Schema, model } from 'mongoose';
-import { Enum_EstadoProyecto, Enum_FaseProyecto, Enum_TipoObjetivo } from '../enums/enums';
-import { UserModel } from '../usuario/usuario';
+import { Enum_EstadoProyecto, Enum_FaseProyecto, Enum_TipoObjetivo } from './enums';
+import { UserModel } from './user';
+import { InscriptionModel } from './inscriptions';
+import { AvancesModel } from './avances';
 
-interface Proyecto {
+interface Project {
   nombre: string;
+  objetivos: [{ descripcion: String; tipo: Enum_TipoObjetivo }];
   presupuesto: number;
   fechaInicio: Date;
   fechaFin: Date;
+  lider: Schema.Types.ObjectId;
   estado: Enum_EstadoProyecto;
   fase: Enum_FaseProyecto;
-  lider: Schema.Types.ObjectId;
-  objetivos: [{ descripcion: String; tipo: Enum_TipoObjetivo }];
+  inscripciones: [{ inscripcion: Schema.Types.ObjectId }];
+  avances: Schema.Types.ObjectId;
 }
 
-const projectSchema = new Schema<Proyecto>({
+const projectSchema = new Schema<Project>({
   nombre: {
     type: String,
     required: true,
-  },
-  presupuesto: {
-    type: Number,
-    required: true,
-  },
-  fechaInicio: {
-    type: Date,
-    required: true,
-  },
-  fechaFin: {
-    type: Date,
-    required: true,
-  },
-  estado: {
-    type: String,
-    enum: Enum_EstadoProyecto,
-    default: Enum_EstadoProyecto.INACTIVO,
-  },
-  fase: {
-    type: String,
-    enum: Enum_FaseProyecto,
-    default: Enum_FaseProyecto.NULO,
-  },
-  lider: {
-    type: Schema.Types.ObjectId,
-    required: true,
-    ref: UserModel,
   },
   objetivos: [
     {
@@ -58,6 +35,47 @@ const projectSchema = new Schema<Proyecto>({
       },
     },
   ],
+  presupuesto: {
+    type: Number,
+    required: true,
+  },
+  fechaInicio: {
+    type: Date,
+    required: true,
+  },
+  fechaFin: {
+    type: Date,
+    required: true,
+  },
+  lider: {
+    type: Schema.Types.ObjectId,
+    required: true,
+    ref: UserModel,
+  },
+  estado: {
+    type: String,
+    enum: Enum_EstadoProyecto,
+    default: Enum_EstadoProyecto.INACTIVO,
+  },
+  fase: {
+    type: String,
+    enum: Enum_FaseProyecto,
+    default: Enum_FaseProyecto.NULO,
+  },
+  inscripciones:  [
+    {
+      inscripcion: {
+        type: Schema.Types.ObjectId,
+        ref: InscriptionModel
+      }
+    },
+  ],
+  avances: {
+    type: Schema.Types.ObjectId,
+    ref: AvancesModel
+  }
+  
+  
 });
 
 const ProjectModel = model('Proyecto', projectSchema);

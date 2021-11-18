@@ -31,6 +31,23 @@ enum Enum_EstadoUsuario {
     aceptada = 'aceptada',
     rechazada = 'rechazada',
   }
+
+  enum Enum_EstadoProyecto {
+    ACTIVO = 'ACTIVO',
+    INACTIVO = 'INACTIVO',
+  }
+  
+  enum Enum_FaseProyecto {
+    INICIADO = 'INICIADO',
+    DESARROLLO = 'DESARROLLO',
+    TERMINADO = 'TERMINADO',
+    NULO = '',
+  }
+  
+  enum Enum_TipoObjetivo {
+    GENERAL = 'GENERAL',
+    ESPECIFICO = 'ESPECIFICO',
+  }
   
   export {
     Enum_Rol,
@@ -39,6 +56,9 @@ enum Enum_EstadoUsuario {
     Enum_ProjectPhase,
     Enum_ObjectiveType,
     Enum_InscriptionStatus,
+    Enum_EstadoProyecto, 
+    Enum_FaseProyecto,
+    Enum_TipoObjetivo
   };
   
 
