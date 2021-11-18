@@ -48,11 +48,11 @@ const userSchema = new Schema({
     required: true,
     enum: Enum_Rol,
   },
-//   estado: {
-//     type: String,
-//     enum: Enum_EstadoUsuario,
-//     default: Enum_EstadoUsuario.PENDIENTE,
-//   },
+  estado: {
+    type: String,
+    enum: Enum_EstadoUsuario,
+    default: Enum_EstadoUsuario.pendiente,
+  },
 });
 
 const UserModel = model("User", userSchema);
