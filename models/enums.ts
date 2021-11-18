@@ -1,14 +1,14 @@
 enum Enum_Rol {
-    ESTUDIANTE = 'ESTUDIANTE',
-    LIDER = 'LIDER',
-    ADMINISTRADOR = 'ADMINISTRADOR',
-  }
-  
-  enum Enum_UserStatus {
-    PENDIENTE = 'PENDIENTE',
-    AUTORIZADO = 'AUTORIZADO',
-    NO_AUTORIZADO = 'NO_AUTORIZADO',
-  }
+  Estudiante = 'Estudiante',
+  Lider = 'Lider',
+  Administrador = 'Administrador',
+}
+
+enum Enum_EstadoUsuario {
+  pendiente = 'pendiente',
+  autorizado = 'autorizado',
+  no_autorizado = 'no_autorizado',
+}
   
   enum Enum_ProjectStatus {
     ACTIVO = 'ACTIVO',
@@ -34,7 +34,7 @@ enum Enum_Rol {
   
   export {
     Enum_Rol,
-    Enum_UserStatus,
+    Enum_EstadoUsuario,
     Enum_ProjectStatus,
     Enum_ProjectPhase,
     Enum_ObjectiveType,
