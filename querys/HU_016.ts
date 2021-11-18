@@ -6,18 +6,18 @@ const main = async () => {
     await conectarBD();
 
 // EDITAR EL ESTADO DE UNA SOLICITUD
-await UserModel.findOneAndUpdate(
-  { id: '12345' },
-  {
-    estado: Enum_InscriptionStatus.aceptada,
-  }
-)
-  .then((u) => {
-    console.log('estado de la solicitud actualizado', u);
-  })
-  .catch((e) => {
-    console.error('Error actualizando el estado de la solicitud', e);
-  });
+    await UserModel.findOneAndUpdate(
+      { id: '12345' },
+      {
+        estado: Enum_InscriptionStatus.aceptada,
+      }
+    )
+      .then((u) => {
+        console.log('estado de la solicitud actualizado', u);
+      })
+      .catch((e) => {
+        console.error('Error actualizando el estado de la solicitud', e);
+      });
 
 };
 

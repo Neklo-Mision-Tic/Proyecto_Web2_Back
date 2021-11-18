@@ -8,13 +8,13 @@ const main = async () => {
     await conectarBD();
 
 // OBTENER LAS SOLICITUDES
-await InscriptionModel.find({ project : "619685784fac5f8c7037f545" })
-  .then((u) => {
-    console.log('solicitudes de inscripción encontradas', u);
-  })
-  .catch((e) => {
-    console.error(e);
-  });
+    await InscriptionModel.find({ project : "619685784fac5f8c7037f545" })
+      .then((u) => {
+        console.log('solicitudes de inscripción encontradas', u);
+      })
+      .catch((e) => {
+        console.error(e);
+      });
 
 };
 
