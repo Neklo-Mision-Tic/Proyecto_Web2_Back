@@ -13,10 +13,10 @@ await UserModel.findOneAndUpdate(
   }
 )
   .then((u) => {
-    console.log('estado de actualizado', u);
+    console.log('estado de la solicitud actualizado', u);
   })
   .catch((e) => {
-    console.error('Error actualizando', e);
+    console.error('Error actualizando el estado de la solicitud', e);
   });
 
 };
