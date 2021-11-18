@@ -22,7 +22,7 @@ enum Enum_Rol {
     NULO = '',
   }
   
-  enum Enum_ObjetiveType {
+  enum Enum_ObjectiveType {
     GENERAL = 'GENERAL',
     ESPECIFICO = 'ESPECIFICO',
   }
@@ -37,7 +37,7 @@ enum Enum_Rol {
     Enum_UserStatus,
     Enum_ProjectStatus,
     Enum_ProjectPhase,
-    Enum_ObjetiveType,
+    Enum_ObjectiveType,
     Enum_InscriptionStatus,
   };
   
