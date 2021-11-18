@@ -1,6 +1,6 @@
 import { Schema, model } from 'mongoose';
 import { Enum_InscriptionStatus } from './enums';
-//import { ProjectModel } from '../projects';
+//import { ProjectModel } from './projects';
 //import { UserModel } from './users';
 
 interface Inscription {
