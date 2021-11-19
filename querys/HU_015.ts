@@ -1,14 +1,12 @@
 // import conectarBD from "../db/db";
-// import { UserModel } from "../models/user";
-// import { Enum_EstadoUsuario } from "../models/user";
-// import { ProjectModel } from "../models/project";
+// import { Enum_EstadoInscripcion } from "../models/enums";
 // import { InscriptionModel } from '../models/inscription';
 
 // const main = async () => {
 //     await conectarBD();
 
 // // OBTENER LAS SOLICITUDES
-//     await InscriptionModel.find({ estado : Enum_EstadoUsuario.pendiente })
+//     await InscriptionModel.find({ estado : Enum_EstadoInscripcion.pendiente })
 //       .then((u) => {
 //         console.log('solicitudes de inscripción encontradas', u);
 //       })

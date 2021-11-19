@@ -11,6 +11,7 @@ enum Enum_EstadoUsuario {
 }
   
   enum Enum_EstadoInscripcion {
+    pendiente = 'pendiente',
     aceptada = 'aceptada',
     rechazada = 'rechazada',
   }
