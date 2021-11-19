@@ -2,7 +2,7 @@
 // import { UserModel } from "../models/user";
 // import { Enum_InscriptionStatus } from "../models/enums";
 // import { ProjectModel } from "../models/project";
-// import { InscriptionModel } from '../models/inscriptions';
+// import { InscriptionModel } from '../models/inscription';
 
 // const main = async () => {
 //     await conectarBD();

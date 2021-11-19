@@ -5,10 +5,10 @@ import { UserModel } from './user';
 
 interface Inscription {
   estado: Enum_EstadoInscripcion;
-  entryDate: Date;
-  endDate: Date;
-  project: Schema.Types.ObjectId;
-  student: Schema.Types.ObjectId;
+  fechaIngreso: Date;
+  fechaEgreso: Date;
+  proyecto: Schema.Types.ObjectId;
+  estudiante: Schema.Types.ObjectId;
 }
 
 const inscriptionSchema = new Schema<Inscription>({
@@ -17,20 +17,20 @@ const inscriptionSchema = new Schema<Inscription>({
     enum: Enum_EstadoInscripcion,
     required: true,
   },
-  entryDate: {
+  fechaIngreso: {
     type: Date,
     required: true,
   },
-  endDate: {
+  fechaEgreso: {
     type: Date,
     required: true,
   },
-  project: {
+  proyecto: {
     type: Schema.Types.ObjectId,
     ref: ProjectModel,
     required: true,
   },
-  student: {
+  estudiante: {
     type: Schema.Types.ObjectId,
     ref: UserModel,
     required: true,

@@ -9,7 +9,7 @@
 //     await UserModel.findOneAndUpdate(
 //       { id: '12345' },
 //       {
-//         estado: Enum_InscriptionStatus.aceptada,
+//         estado: Enum_EstadoInscripcion.aceptada,
 //       }
 //     )
 //       .then((u) => {

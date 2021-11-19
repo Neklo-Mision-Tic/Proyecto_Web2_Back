@@ -7,35 +7,55 @@ enum Enum_Rol {
 enum Enum_EstadoUsuario {
   pendiente = 'pendiente',
   autorizado = 'autorizado',
-  noAutorizado = 'noAutorizado',
+  no_autorizado = 'no_autorizado',
 }
   
-  enum Enum_EstadoInscripcion {
+  enum Enum_ProjectStatus {
+    ACTIVO = 'ACTIVO',
+    INACTIVO = 'INACTIVO',
+  }
+  
+  enum Enum_ProjectPhase {
+    INICIADO = 'INICIADO',
+    DESARROLLO = 'DESARROLLO',
+    TERMINADO = 'TERMINADO',
+    NULO = '',
+  }
+  
+  enum Enum_ObjectiveType {
+    GENERAL = 'GENERAL',
+    ESPECIFICO = 'ESPECIFICO',
+  }
+  
+  enum Enum_InscriptionStatus {
     aceptada = 'aceptada',
     rechazada = 'rechazada',
   }
 
   enum Enum_EstadoProyecto {
-    activo = 'activo',
-    inactivo = 'inactivo',
+    ACTIVO = 'ACTIVO',
+    INACTIVO = 'INACTIVO',
   }
   
   enum Enum_FaseProyecto {
-    iniciado = 'iniciado',
-    desarrollo = 'desarrollo',
-    terminado = 'terminado',
-    nulo = '',
+    INICIADO = 'INICIADO',
+    DESARROLLO = 'DESARROLLO',
+    TERMINADO = 'TERMINADO',
+    NULO = '',
   }
   
   enum Enum_TipoObjetivo {
-    general = 'general',
-    especifico = 'especifico',
+    GENERAL = 'GENERAL',
+    ESPECIFICO = 'ESPECIFICO',
   }
   
   export {
     Enum_Rol,
     Enum_EstadoUsuario,
-    Enum_EstadoInscripcion,
+    Enum_ProjectStatus,
+    Enum_ProjectPhase,
+    Enum_ObjectiveType,
+    Enum_InscriptionStatus,
     Enum_EstadoProyecto, 
     Enum_FaseProyecto,
     Enum_TipoObjetivo
