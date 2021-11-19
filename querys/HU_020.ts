@@ -12,7 +12,7 @@
 //     estado : Enum_EstadoInscripcion.pendiente,
 //     fechaIngreso : new Date('2021/12/25'),
 //     fechaEgreso : new Date('2022/11/25'),
-//     // proyecto : "61970e9f1620bc14cb3fa7c8",
+//     // proyecto : "6197b66585646e5844bab56c",
 //     estudiante: "6195d905beaedc9b1a520181"
     
 //   })
