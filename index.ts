@@ -65,7 +65,7 @@ import conectarBD from "./db/db";
 import { Enum_EstadoInscripcion } from "./models/enums";
 import { InscriptionModel } from './models/inscription';
 // import { ProjectModel } from "./models/project";
-// import { UserModel } from "./models/user";
+import { UserModel } from "./models/user";
 
 const main = async () => {
   await conectarBD();
@@ -75,8 +75,8 @@ const main = async () => {
     estado : Enum_EstadoInscripcion.aceptada,
     fechaIngreso : new Date('2021/12/25'),
     fechaEgreso : new Date('2022/11/25'),
-    // proyecto : "619685784fac5f8c7037f545",
-    // estudiante: "6195d905beaedc9b1a520181"
+    // proyecto : "61970e9f1620bc14cb3fa7c8",
+    estudiante: "6195d905beaedc9b1a520181"
     
   })
   .then((u) => {
