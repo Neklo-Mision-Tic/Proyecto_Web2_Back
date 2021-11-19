@@ -1,24 +1,24 @@
-import conectarBD from "../db/db";
-import { UserModel } from "../models/user";
-import { Enum_InscriptionStatus } from "../models/enums";
-import { ProjectModel } from "../models/project";
-import { InscriptionModel } from '../models/inscriptions';
+// import conectarBD from "../db/db";
+// import { UserModel } from "../models/user";
+// import { Enum_InscriptionStatus } from "../models/enums";
+// import { ProjectModel } from "../models/project";
+// import { InscriptionModel } from '../models/inscriptions';
 
-const main = async () => {
-    await conectarBD();
+// const main = async () => {
+//     await conectarBD();
 
-// OBTENER LAS SOLICITUDES
-    await InscriptionModel.find({ project : "619685784fac5f8c7037f545" })
-      .then((u) => {
-        console.log('solicitudes de inscripción encontradas', u);
-      })
-      .catch((e) => {
-        console.error('error al buscar la solicitud de inscripción', e);
-      });
+// // OBTENER LAS SOLICITUDES
+//     await InscriptionModel.find({ project : "619685784fac5f8c7037f545" })
+//       .then((u) => {
+//         console.log('solicitudes de inscripción encontradas', u);
+//       })
+//       .catch((e) => {
+//         console.error('error al buscar la solicitud de inscripción', e);
+//       });
 
-};
+// };
 
-main();
+// main();
 
 
 // Historia de usuario: HU_015
