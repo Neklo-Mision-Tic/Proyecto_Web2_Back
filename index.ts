@@ -13,7 +13,7 @@ const main = async () => {
     //   apellido: "Mina",
     //   correo: "test3@neklo.com",
     //   identificacion: 136,
-    //   rol: Enum_Rol.Estudiante,
+    //   rol: Enum_Rol.estudiante,
     // })
 
     //   .then((u) => {
