@@ -1,7 +1,7 @@
 import { Schema, model } from 'mongoose';
 import { Enum_EstadoProyecto, Enum_FaseProyecto, Enum_TipoObjetivo } from './enums';
 import { UserModel } from './user';
-import { InscriptionModel } from './inscriptions';
+import { InscriptionModel } from './inscription';
 import { AvancesModel } from './avances';
 
 interface Project {
