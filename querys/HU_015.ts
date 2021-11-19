@@ -2,13 +2,13 @@
 // import { UserModel } from "../models/user";
 // import { Enum_InscriptionStatus } from "../models/enums";
 // import { ProjectModel } from "../models/project";
-// import { InscriptionModel } from '../models/inscriptions';
+// import { InscriptionModel } from '../models/inscription';
 
 // const main = async () => {
 //     await conectarBD();
 
 // // OBTENER LAS SOLICITUDES
-//     await InscriptionModel.find({ project : "619685784fac5f8c7037f545" })
+//     await InscriptionModel.find({ estado : Enum_EstadoUsuario.pendiente })
 //       .then((u) => {
 //         console.log('solicitudes de inscripción encontradas', u);
 //       })

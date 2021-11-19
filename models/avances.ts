@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
-//import { ProjectModel } from "./project";
-//import { UserModel } from "./users";
+import { ProjectModel } from "./project";
+import { UserModel } from "./user";
 
 interface Avance{
     proyecto: Schema.Types.ObjectId;
@@ -26,13 +26,13 @@ const avanceSchema= new Schema<Avance>({
     ],
     proyecto:{
         type:Schema.Types.ObjectId,
-        //ref:ProjectModel,
+        ref:ProjectModel,
         required:true,
     },
     creadoPor:{
         type:Schema.Types.ObjectId,
         required:true,
-        //ref:UserModel,
+        ref:UserModel,
     }
 });
 

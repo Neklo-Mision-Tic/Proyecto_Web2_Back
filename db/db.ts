@@ -1,7 +1,9 @@
 import { connect } from "mongoose";
 
 const conectarBD = async () => {
-  return await connect(process.env.DATABASE_URL)
+  return await connect(
+    "mongodb+srv://admin:admin123@gestionproyectosneklo.4rlgm.mongodb.net/gestionProyectos?retryWrites=true&w=majority"
+  )
     .then(() => {
       console.log("Conexión exitosa");
     })
