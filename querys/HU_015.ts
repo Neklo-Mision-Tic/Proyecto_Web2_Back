@@ -1,6 +1,6 @@
 // import conectarBD from "../db/db";
 // import { UserModel } from "../models/user";
-// import { Enum_InscriptionStatus } from "../models/enums";
+// import { Enum_EstadoUsuario } from "../models/user";
 // import { ProjectModel } from "../models/project";
 // import { InscriptionModel } from '../models/inscription';
 

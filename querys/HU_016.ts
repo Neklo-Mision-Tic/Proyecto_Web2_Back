@@ -1,6 +1,7 @@
 // import conectarBD from "../db/db";
 // import { UserModel } from "../models/user";
-// import { Enum_InscriptionStatus } from "../models/enums";
+// import { InscriptionModel } from '../models/inscription';
+// import { Enum_EstadoInscripcion } from "../models/enums";
 
 // const main = async () => {
 //     await conectarBD();

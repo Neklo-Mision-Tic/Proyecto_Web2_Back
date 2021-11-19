@@ -1,13 +1,15 @@
 // import conectarBD from "../db/db";
-// import { Enum_InscriptionStatus } from "../models/enums";
+// import { Enum_EstadoInscripcion } from "../models/enums";
 // import { InscriptionModel } from '../models/inscription';
+// import { ProjectModel } from "../models/project";
+// import { UserModel } from "../models/user";
 
 // const main = async () => {
 //   await conectarBD();
 
 // // GENERAR UNA SOLICITUD
 //   await InscriptionModel.create({
-//     estado : Enum_InscriptionStatus.aceptada,
+//     estado : Enum_EstadoInscripcion.aceptada,
 //     fechaIngreso : new Date('2021/12/25'),
 //     fechaEgreso : new Date('2022/11/25'),
 //     proyecto : "619685784fac5f8c7037f545",
