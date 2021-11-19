@@ -13,7 +13,7 @@ const main = async () => {
         console.log('solicitudes de inscripción encontradas', u);
       })
       .catch((e) => {
-        console.error(e);
+        console.error('error al buscar la solicitud de inscripción', e);
       });
 
 };

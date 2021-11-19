@@ -13,6 +13,12 @@ const main = async () => {
     project : "619685784fac5f8c7037f545",
     student: "6195d905beaedc9b1a520181"
     
+  })
+  .then((u) => {
+    console.log('solicitud de inscripción generada exitosamente', u);
+  })
+  .catch((e) => {
+    console.error('error al generar la solicitud', e);
   });
 
 };

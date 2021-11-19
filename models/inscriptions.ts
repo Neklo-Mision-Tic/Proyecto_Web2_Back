@@ -28,12 +28,12 @@ const inscriptionSchema = new Schema<Inscription>({
   project: {
     type: Schema.Types.ObjectId,
     ref: ProjectModel,
-    required: true,
+    required: false,
   },
   student: {
     type: Schema.Types.ObjectId,
     ref: UserModel,
-    required: true,
+    required: false,
   },
 });
 
