@@ -6,20 +6,20 @@
 */
 import conectarBD from '../db/db';
 import { AvancesModel } from '../models/advance';
-const main=async()=>{
-    await conectarBD();
-    await AvancesModel.create({
-        proyecto:'6197b66585646e5844bab56c',
-        fecha: Date.now(),
-        descripcion: 'Modificación',
-        observaciones:['primera observacion','segunda observacion'],
-        creadoPor:'619862f59be04c0e6c204c14'
-    })
-    .then((a)=>{
-        console.log('Avance agregado',a)
-    })
-    .catch((e)=>{
-        console.log('Error agregando avance')
-    });
-}
-main();
+// const main=async()=>{
+//     await conectarBD();
+//     await AvancesModel.create({
+//         proyecto:'6197b66585646e5844bab56c',
+//         fecha: Date.now(),
+//         descripcion: 'Modificación',
+//         observaciones:['primera observacion','segunda observacion'],
+//         creadoPor:'619862f59be04c0e6c204c14'
+//     })
+//     .then((a)=>{
+//         console.log('Avance agregado',a)
+//     })
+//     .catch((e)=>{
+//         console.log('Error agregando avance')
+//     });
+// }
+// main();
