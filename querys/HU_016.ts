@@ -1,15 +1,25 @@
 // import conectarBD from "../db/db";
-// import { UserModel } from "../models/user";
-// import { Enum_InscriptionStatus } from "../models/enums";
+// import { Enum_EstadoInscripcion } from "../models/enums";
+// import { InscriptionModel } from '../models/inscription';
+// import { ProjectModel } from "../models/project";
 
 // const main = async () => {
 //     await conectarBD();
 
+// // // OBTENER LAS SOLICITUDES
+//     await InscriptionModel.find({ proyecto : "61970e9f1620bc14cb3fa7c8" })
+//       .then((u) => {
+//         console.log('solicitudes de proyectos que lidera', u);
+//       })
+//       .catch((e) => {
+//         console.error('error al buscar las solicitudes de los proyectos que lidera', e);
+//       });
+
 // // EDITAR EL ESTADO DE UNA SOLICITUD
-//     await UserModel.findOneAndUpdate(
-//       { id: '12345' },
+//     await InscriptionModel.findOneAndUpdate(
+//       { id: "61971cddec6ca7488a9fb46c" },
 //       {
-//         estado: Enum_EstadoInscripcion.aceptada,
+//         estado: Enum_EstadoInscripcion.rechazada,
 //       }
 //     )
 //       .then((u) => {
