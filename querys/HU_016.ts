@@ -1,11 +1,12 @@
 // import conectarBD from "../db/db";
 // import { Enum_EstadoInscripcion } from "../models/enums";
 // import { InscriptionModel } from '../models/inscription';
+// import { ProjectModel } from "../models/project";
 
 // const main = async () => {
 //     await conectarBD();
 
-// // OBTENER LAS SOLICITUDES
+// // // OBTENER LAS SOLICITUDES
 //     await InscriptionModel.find({ proyecto : "61970e9f1620bc14cb3fa7c8" })
 //       .then((u) => {
 //         console.log('solicitudes de proyectos que lidera', u);

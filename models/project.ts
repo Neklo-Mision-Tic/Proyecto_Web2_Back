@@ -66,13 +66,13 @@ const projectSchema = new Schema<Project>({
     {
       inscripcion: {
         type: Schema.Types.ObjectId,
-        ref: InscriptionModel
+        // ref: InscriptionModel
       }
     },
   ],
   avances: {
     type: Schema.Types.ObjectId,
-    ref: AvancesModel
+    // ref: AvancesModel
   }
   
   
