@@ -1,13 +1,13 @@
-enum enumRol {
-    Estudiante = 'Estudiante',
-    Lider = 'Lider',
-    Administrador = 'Administrador',
+enum enum_Rol {
+  estudiante = "estudiante",
+  lider = "lider",
+  administrador = "administrador",
 }
 
-enum enumEstadoUsuario {
-    pendiente = 'pendiente',
-    autorizado = 'autorizado',
-    no_autorizado = 'noAutorizado',
-  }
+enum enum_EstadoUsuario {
+  pendiente = "pendiente",
+  autorizado = "autorizado",
+  noAutorizado = "noAutorizado",
+}
 
-  export {enumRol, enumEstadoUsuario };
+export { enum_Rol, enum_EstadoUsuario };
