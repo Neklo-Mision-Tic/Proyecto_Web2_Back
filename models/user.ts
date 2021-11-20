@@ -1,5 +1,5 @@
 import { Schema, model, models } from "mongoose";
-import { enum_Rol, enum_EstadoUsuario } from "./enums";
+import { Enum_Rol, Enum_EstadoUsuario } from "./enums";
 
 interface User {
   correo: string;
@@ -7,8 +7,8 @@ interface User {
   password: string;
   nombre: string;
   apellido: string;
-  rol: enum_Rol;
-  estado: enum_EstadoUsuario;
+  rol: Enum_Rol;
+  estado: Enum_EstadoUsuario;
 }
 
 const userSchema = new Schema<User>({
@@ -44,12 +44,12 @@ const userSchema = new Schema<User>({
   rol: {
     type: String,
     required: true,
-    enum: enum_Rol,
+    enum: Enum_Rol,
   },
   estado: {
     type: String,
-    enum: enum_EstadoUsuario,
-    default: enum_EstadoUsuario.pendiente,
+    enum: Enum_EstadoUsuario,
+    default: Enum_EstadoUsuario.pendiente,
   },
 });
 
