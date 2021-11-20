@@ -8,3 +8,10 @@
     //   apellido: "Linares",      
     //   rol: enum_Rol.estudiante,
     // })
+
+    //   .then((u) => {
+    //     console.log("Usuario creado", u);
+    //   })
+    //   .catch((e) => {
+    //     console.error("Error creando el usuario", e);
+    //   });
