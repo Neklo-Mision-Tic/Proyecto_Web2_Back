@@ -1,17 +1,12 @@
 import conectarBD from "./db/db";
 import { UserModel } from "./models/user";
-import { Enum_Rol, Enum_EstadoUsuario, Enum_TipoObjetivo, Enum_EstadoProyecto, Enum_FaseProyecto } from "./models/enums";
+import { Enum_Rol, Enum_EstadoUsuario, Enum_TipoObjetivo, Enum_EstadoProyecto, Enum_FaseProyecto, Enum_EstadoInscripcion } from "./models/enums";
 import { ProjectModel } from "./models/project";
+import { AvancesModel } from "./models/advance";
+import { InscriptionModel } from "./models/inscription";
 
-const main = async () => {
-  await conectarBD();
-
-
-
-
-
-
-
+// const main = async () => {
+//   await conectarBD();
 
 /* 
   //Código creación usuarios h1
@@ -43,6 +38,6 @@ const main = async () => {
 
 ///////////////////////////////////////////////////////////////////
 */
-};
+// };
 
-main();
+// main();

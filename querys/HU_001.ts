@@ -6,7 +6,7 @@
     //   password: "test124",
     //   nombre: "Gabriella",
     //   apellido: "Linares",      
-    //   rol: enum_Rol.estudiante,
+    //   rol: Enum_Rol.estudiante,
     // })
 
     //   .then((u) => {

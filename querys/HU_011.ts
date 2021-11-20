@@ -4,7 +4,7 @@
   //   { correo: "test14@neklo.com" },
 
   //   {
-  //     estado: enumEstadoUsuario.autorizado,
+  //     estado: Enum_EstadoUsuario.autorizado,
   //   }
   // )
   //   .then((u) => {

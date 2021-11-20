@@ -1,8 +1,8 @@
   // //Ver lista de los usuarios registrados en la plataforma (Tanto autorizados como no autorizados) HU_004
   // await UserModel.find({
   //   $or: [
-  //     { estado: enumEstadoUsuario.pendiente },
-  //     { estado: enumEstadoUsuario.autorizado },
+  //     { estado: Enum_EstadoUsuario.pendiente },
+  //     { estado: Enum_EstadoUsuario.autorizado },
   //   ],
   // })
   //   .then((u) => {

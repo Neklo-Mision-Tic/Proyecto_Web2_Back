@@ -32,7 +32,7 @@ const inscriptionSchema = new Schema<Inscription>({
   },
   estudiante: {
     type: Schema.Types.ObjectId,
-    ref: UserModel,
+    // ref: UserModel,
     required: true,
   },
 });
