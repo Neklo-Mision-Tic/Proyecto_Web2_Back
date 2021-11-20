@@ -1,6 +1,6 @@
 import conectarBD from "./db/db";
 import { UserModel } from "./models/user";
-import { enum_Rol, enum_EstadoUsuario } from "./models/enums";
+import { Enum_Rol, Enum_EstadoUsuario } from "./models/enums";
 
 const main = async () => {
   await conectarBD();
