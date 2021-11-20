@@ -13,8 +13,8 @@ interface Project {
   lider: Schema.Types.ObjectId;
   estado: Enum_EstadoProyecto;
   fase: Enum_FaseProyecto;
-  inscripciones: [{ inscripcion: Schema.Types.ObjectId }];
-  avances: Schema.Types.ObjectId;
+  //inscripciones: [{ inscripcion: Schema.Types.ObjectId }];
+  //avances: Schema.Types.ObjectId;
 }
 
 const projectSchema = new Schema<Project>({
@@ -62,7 +62,7 @@ const projectSchema = new Schema<Project>({
     enum: Enum_FaseProyecto,
     default: Enum_FaseProyecto.nulo,
   },
-  inscripciones:  [
+  /*inscripciones:  [
     {
       inscripcion: {
         type: Schema.Types.ObjectId,
@@ -73,7 +73,7 @@ const projectSchema = new Schema<Project>({
   avances: {
     type: Schema.Types.ObjectId,
     // ref: AvancesModel
-  }
+  }*/
   
   
 });
