@@ -1,7 +1,9 @@
 {
-  "name": "gestion-proyectos-mintic-back",
+  "name": "server",
   "version": "1.0.0",
+  "description": "server",
   "main": "index.js",
+  "author": "ocortesl",
   "license": "MIT",
   "scripts": {
     "start": "node index.js",
