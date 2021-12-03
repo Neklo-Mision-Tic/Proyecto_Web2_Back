@@ -68,6 +68,7 @@ const resolversUsuario = {
           identificacion: args.identificacion,
           correo: args.correo,
           rol: args.rol,
+          estado: args.estado
         },
         { new: true } // Actulizar la información que se despliega en graphql
       );
