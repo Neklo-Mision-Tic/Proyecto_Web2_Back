@@ -20,6 +20,7 @@ const tiposProyecto = gql`
     estado: Enum_EstadoProyecto
     fase: Enum_FaseProyecto
     lider: String
+    objetivos: String
   }
 
   input editObjetivo {

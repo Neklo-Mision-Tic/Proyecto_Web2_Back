@@ -1,6 +1,6 @@
-import { UserModel } from '../../models/usuario/usuario.js';
-import bcrypt from 'bcrypt';
-import { generateToken } from '../../utils/tokenUtils.js';
+import { UserModel } from "../../models/usuario/usuario.js";
+import bcrypt from "bcrypt";
+import { generateToken } from "../../utils/tokenUtils.js";
 
 const resolversAutenticacion = {
   Mutation: {
@@ -15,7 +15,7 @@ const resolversAutenticacion = {
         rol: args.rol,
         password: hashedPassword,
       });
-      console.log('usuario creado con éxito', usuarioCreado);
+      console.log("usuario creado con éxito", usuarioCreado);
       return {
         token: generateToken({
           _id: usuarioCreado._id,
@@ -45,10 +45,10 @@ const resolversAutenticacion = {
     },
 
     refreshToken: async (parent, args, context) => {
-      console.log('contexto', context);
+      console.log("contexto", context);
       if (!context.userData) {
         return {
-          error: 'token no valido',
+          error: "token no valido",
         };
       } else {
         return {
@@ -62,8 +62,6 @@ const resolversAutenticacion = {
           }),
         };
       }
-      // valdiar que el contexto tenga info del usuario. si si, refrescar el token
-      // si no devolver null para que en el front redirija al login.
     },
   },
 };
