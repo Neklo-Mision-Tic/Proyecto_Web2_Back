@@ -1,14 +1,14 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
-const conectarBD = async () => {
-  return await mongoose
+const conexion=async ()=>{
+    return await mongoose 
     .connect(process.env.DATABASE_URL)
-    .then(() => {
-      console.log('Conexion exitosa');
+                            
+    .then(()=>{
+        console.log('conexion exitosa');
     })
-    .catch((e) => {
-      console.error('Error conectando a la bd', e);
+    .catch((e)=>{
+        console.log('Error conectandose a la bd',e)
     });
-};
-
-export default conectarBD;
+}
+export default conexion;
