@@ -1,40 +1,42 @@
-import { gql } from 'apollo-server-express';
+import {gql} from 'apollo-server-express';
 
-const tiposEnums = gql`
-  enum Enum_EstadoUsuario {
+const tiposEnum=gql`
+
+
+enum Enum_EstadoUsuario{
     PENDIENTE
     AUTORIZADO
     NO_AUTORIZADO
-  }
+}
 
-  enum Enum_Rol {
+enum Enum_Rol{
     ESTUDIANTE
     LIDER
     ADMINISTRADOR
-  }
+}
 
-  enum Enum_EstadoProyecto {
+enum Enum_EstadoProyecto{
     ACTIVO
     INACTIVO
-  }
+}
 
-  enum Enum_FaseProyecto {
+enum Enum_FaseProyecto{
     INICIADO
     DESARROLLO
     TERMINADO
     NULO
-  }
+}
 
-  enum Enum_TipoObjetivo {
+enum Enum_TipoObjetivo{
     GENERAL
     ESPECIFICO
-  }
+}
 
-  enum Enum_EstadoInscripcion {
+enum Enum_EstadoInscripcion{
     ACEPTADO
     RECHAZADO
     PENDIENTE
-  }
+}
 `;
 
-export { tiposEnums };
+export {tiposEnum};

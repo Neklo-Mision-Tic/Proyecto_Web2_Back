@@ -1,5 +1,0 @@
-Servidor heroku: https://dashboard.heroku.com/apps/neklo-server/deploy/github
-graphql: https://studio.apollographql.com/graph/neklo-server/explorer?variant=current
-         https://studio.apollographql.com/sandbox/explorer
-mongodb: https://studio.apollographql.com/sandbox/explorer
-git: https://github.com/ocortesl/BK3---copia---copia

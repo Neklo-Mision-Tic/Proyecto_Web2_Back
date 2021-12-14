@@ -1,46 +1,55 @@
-import { gql } from 'apollo-server-express';
+import {gql} from 'apollo-server-express';
 
-const tiposUsuario = gql`
-  type Usuario {
-    _id: ID!
+const tiposUsuario=gql`
+
+type Usuario{
+    _id:ID!
     nombre: String!
     apellido: String!
     identificacion: String!
-    correo: String!
+    correo:String!
+    estado:Enum_EstadoUsuario
     rol: Enum_Rol!
-    estado: Enum_EstadoUsuario
     inscripciones: [Inscripcion]
     avancesCreados: [Avance]
-  }
+    proyectosLiderados: [Proyecto]
+}
 
-  type Query {
-    Usuarios: [Usuario]
-    Usuario(_id: String!): Usuario
-  }
+type Query{
+    Usuarios:[Usuario]
+    buscarUsuario(_id:String!):Usuario
+    bucarByCampos(
+        nombre: String
+    apellido: String
+    identificacion: String
+    correo:String
+    estado:Enum_EstadoUsuario
+    rol: Enum_Rol
+    ):[Usuario]
 
-  type Mutation {
+    buscarLider:[Usuario]
+    buscarEstudiante:[Usuario]
+}
+type Mutation{
     crearUsuario(
-      nombre: String!
-      apellido: String!
-      identificacion: String!
-      correo: String!
-      rol: Enum_Rol!
-      estado: Enum_EstadoUsuario
-      password: String!
-    ): Usuario
-
-    editarUsuario(
-      _id: String!
-      nombre: String!
-      apellido: String!
-      identificacion: String!
-      correo: String!
-      rol: Enum_Rol!
-      estado: Enum_EstadoUsuario
-    ): Usuario
-
-    eliminarUsuario(_id: String, correo: String): Usuario
-  }
+        nombre: String!
+        apellido: String!
+        identificacion: String!
+        correo:String!
+        estado:Enum_EstadoUsuario
+        rol: Enum_Rol!
+        password:String!
+    ):Usuario
+    eliminarUsuario(_id:String, correo:String):Usuario
+    modificarUsuario(
+        _id:String!
+        nombre: String
+        apellido: String
+        identificacion: String
+        correo:String
+        estado:Enum_EstadoUsuario
+        rol: Enum_Rol):Usuario
+}
 `;
 
-export { tiposUsuario };
+export {tiposUsuario};
