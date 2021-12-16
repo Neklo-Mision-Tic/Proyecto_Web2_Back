@@ -7,7 +7,7 @@ const resolverProyecto={
             return proyectos;
         },
         buscarProyectosByLider:async(parent,args)=>{
-            const buscados=await ProjectModel.find({lider:args.lider});
+            const buscados=await ProjectModel.find({lider:args.lider}).populate('lider');
             return buscados;
         },
         buscarProyectoByCampos:async(parern,args)=>{
@@ -30,7 +30,7 @@ const resolverProyecto={
             fase:args.fase,
             lider:args.lider,
             objetivos:args.objetivos,
-        });
+        })
         return elproyecto;
     },
     modificarProyecto:async(parent,args)=>{
@@ -43,7 +43,7 @@ const resolverProyecto={
             fase:args.fase,
             lider:args.lider,
             objetivos:args.objetivos,
-        },{new:true});
+        },{new:true}).populate('lider');
         return elmodificado;
     },
     crearObjetivo:async(parente, args)=>{
