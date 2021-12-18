@@ -11,10 +11,11 @@ type Inscripcion{
 }
 type Query{
     Inscripciones:[Inscripcion]
+    inscripcionByEstudiante(estudiante:String!):[Inscripcion]
 }
 type Mutation{
     crearInscripcion(
-        estado:Enum_EstadoInscripcion!
+        estado:Enum_EstadoInscripcion
         proyecto:String!
         estudiante:String!
     ):Inscripcion
@@ -22,6 +23,8 @@ type Mutation{
     aprobarInscripcion(
         _id:String!
     ):Inscripcion
+
+    rechazarInscripcion(_id:String!):Inscripcion
 }
 `
 export {tiposInscripcion};
